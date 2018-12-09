@@ -1,10 +1,7 @@
-import ReactDOM from 'react-dom';
-import App from './components/App';
+import React from "react";
+import ReactDOM from "react-dom";
 
-const element = document.getElementById('root');
+const placeholder = document.getElementById("root");
 
-const myName = 'myros';
-
-const myMainComponent = App(myName);
-
-ReactDOM.render(myMainComponent, element);
+import(/* webpackChunkName: "adman-video-analytics" */'./containers/Root')
+  .then(({ default: App }) => ReactDOM.render(<App />, placeholder));
