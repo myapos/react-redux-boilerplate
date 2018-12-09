@@ -73,19 +73,9 @@ const config = {
   },
 
   plugins: [
-    // new webpack.optimize.OccurrenceOrderPlugin(),
-    // new webpack.HotModuleReplacementPlugin(),
-    // new webpack.NoEmitOnErrorsPlugin(),
-    // new UglifyJSPlugin({
-    //   sourceMap: true,
-    //   uglifyOptions: { ecma: 8 },
-    // }),
     new webpack.BannerPlugin({
       banner: `Build: ${new Date().toLocaleString()}`
     })
-    // new ExtractTextPlugin("styles.css"),
-    // new BundleAnalyzerPlugin(),
-    // new MomentLocalesPlugin(), // remove moment locales
   ]
 };
 

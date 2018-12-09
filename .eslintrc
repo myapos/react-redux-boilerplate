@@ -12,7 +12,6 @@
     "max-classes-per-file": 1,
     "max-lines-per-function": 1,
     "no-debugger": 0
-
   },
   "settings": {
     "react": {
