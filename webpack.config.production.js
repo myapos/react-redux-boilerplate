@@ -1,16 +1,6 @@
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin'); // installed via npm
 
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-
-const HtmlWebPackPlugin = require('html-webpack-plugin');
-
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const path = require('path');
 const config = require('./webpack.config');
@@ -73,48 +63,18 @@ config.module.rules = [
       loader: 'babel-loader',
     },
   },
-  // {
-  //   test: /\.html$/,
-  //   use: [
-  //     {
-  //       loader: 'html-loader',
-  //       options: { minimize: true },
-  //     },
-  //   ],
-  // },
   {
     test: /\.css$/,
-    // use: 'css-loader',
     use: ['style-loader', 'css-loader'],
   },
-  // {
-  //   test: /\.styl$/,
-  //   // use: 'css-loader',
-  //   use: [
-  //     // {
-  //     //   loader: 'style-loader', // creates style nodes from JS strings
-  //     // },
-  //     MiniCssExtractPlugin.loader,
-  //     {
-  //       loader: 'css-loader', // translates CSS into CommonJS
-  //     },
-  //     {
-  //       loader: 'stylus-loader', // compiles Stylus to CSS
-  //     },
-  //   ],
-  // },
 ];
 
-// config.mode = 'production';
+config.mode = 'production';
 
 Object.assign(config.output, {
   path: path.resolve(__dirname, 'dist'),
   publicPath: '/dist/',
 });
-
-// console.log(config.module.rules);
-
-// console.log('css path:', path.resolve(__dirname, 'src') + '/css/player.css');
 
 config.plugins = [
   new CleanWebpackPlugin(['dist']),
