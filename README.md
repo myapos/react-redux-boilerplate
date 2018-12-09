@@ -7,7 +7,7 @@ Use this repo as a starter for your React projects. For development run `yarn st
 #### Description
 
 Another simple React minimal boilerplate to build a new project with ES6 and stylus support.
-Configured with React 16 and Webpack 4.
+Configured with React 16, Redux and Webpack 4.
 
 #### Commands
 * `yarn` 
