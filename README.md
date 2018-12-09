@@ -10,8 +10,8 @@ Another simple React minimal boilerplate to build a new project with ES6 and sty
 Configured with React 16x and Webpack 4 versions.
 
 #### Commands
-* yarn 
-* yarn start
-* yarn build
-* yarn test
+* `yarn` 
+* `yarn start`
+* `yarn build`
+* `yarn test`
 
